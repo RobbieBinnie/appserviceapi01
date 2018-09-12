@@ -6,6 +6,7 @@ if(!empty($_GET['info']))
 	$info=$_GET['info'];
 
 	if($info == "time"){
+		date_default_timezone_set("Europe/London");
 		$datetime=date("Y-m-d H:i:s");
 		response(200,"valid request",$datetime);
 	}
